@@ -1,0 +1,119 @@
+# Nmap 7.91 scan initiated Fri Nov 12 16:39:46 2021 as: nmap -p3389,3700,4848,6060,7676,8080,8181,8686 -sV -sC -vvv -oN Fish-nmap-scan 192.168.168.168
+Nmap scan report for 192.168.168.168
+Host is up, received timestamp-reply ttl 127 (0.032s latency).
+Scanned at 2021-11-12 16:39:46 EST for 35s
+
+PORT     STATE SERVICE              REASON          VERSION
+3389/tcp open  ms-wbt-server        syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: FISHYYY
+|   NetBIOS_Domain_Name: FISHYYY
+|   NetBIOS_Computer_Name: FISHYYY
+|   DNS_Domain_Name: Fishyyy
+|   DNS_Computer_Name: Fishyyy
+|   Product_Version: 10.0.19041
+|_  System_Time: 2021-10-29T14:22:00+00:00
+| ssl-cert: Subject: commonName=Fishyyy
+| Issuer: commonName=Fishyyy
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-10-27T11:48:08
+| Not valid after:  2022-04-28T11:48:08
+| MD5:   48c8 5769 6083 466c ec2e 5f97 e566 8bb8
+| SHA-1: 4c54 dd14 d40a cbcc 1757 7d7f b2dd 6eb8 49b4 766d
+| -----BEGIN CERTIFICATE-----
+| MIIC0jCCAbqgAwIBAgIQKASh5tryda1N1o2L1wvfSjANBgkqhkiG9w0BAQsFADAS
+| MRAwDgYDVQQDEwdGaXNoeXl5MB4XDTIxMTAyNzExNDgwOFoXDTIyMDQyODExNDgw
+| OFowEjEQMA4GA1UEAxMHRmlzaHl5eTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+| AQoCggEBANMja+fMoIJO/XfS/h2TEEUkkVOPWHnsWkdPSYe2xHRgkBapyVu66ehi
+| uC4RYN2xEhytixLLAUYqnKmOsEjCZ5jogECBju8F/eYDDs2/IMs7dJH+qb6BqMgs
+| 39zMCdr8kUmC6LBeSAy7Yf5kPD/zopsrPADl3DwU7Yk9xZynuwBGDFYziBaLA6S+
+| /muxVEYxZI/FMwMM6GXwvRQ9lnBDgkhkiTMDW6WgI4NvNdB/OHTWDv4FJmbbkpn2
+| yGhgfZLqoEDRhm3E4u3bPWTLZnl3l+MdOfCj8Kd3XAubm/XlmU5tFvkCXBNUcEYS
+| Y1usUW63yHa2/2lM5EKbi4+5JKkhE7UCAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYB
+| BQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQDKM/3YpZvdVQXz
+| 879kQ6EabNXyZh1Hf/WFgU4CgSaffSx5DegWHrkQ3AYt+xNYfipfrTX/tB6hKs2d
+| NALpFOyKuwHUGzpTIQn+W/1eIyV9nFXhN+ZxZH7zY6TKMoFbZ6537UxkHAK0Lg3B
+| Ej4RlMJxlu8D5CG1E8pkFnidOBJYW7rqEdQGTto1lStRbSukZM0otxkf38wZ4e6l
+| 54KB2NNqTivkjdwSWCBb/jRCppNVpvY4ctor2caHeouRfpurNNrOfgHC3oB5Z9JT
+| 9XqNS0J41Ly1kihCqyhARP7hdU9iIApMsp1rDfjnmbh0zCcD19e6QIBnfotz3UwU
+| SmczG+r0
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-10-29T14:22:10+00:00; -14d07h18m11s from scanner time.
+3700/tcp open  giop                 syn-ack ttl 127 CORBA naming service
+4848/tcp open  http                 syn-ack ttl 127 Sun GlassFish Open Source Edition  4.1
+|_http-favicon: Unknown favicon MD5: 64BD416350A8FEF7FC7961B2892165FC
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: GlassFish Server Open Source Edition  4.1 
+|_http-title: Login
+6060/tcp open  http                 syn-ack ttl 127 Synametrics Web Server 7 (Syncrify)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Synametrics Web Server v7
+|_http-title: Site doesn't have a title (text/html).
+7676/tcp open  java-message-service syn-ack ttl 127 Java Message Service 301
+8080/tcp open  http                 syn-ack ttl 127 Sun GlassFish Open Source Edition  4.1
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE TRACE OPTIONS
+|_  Potentially risky methods: PUT DELETE TRACE
+|_http-server-header: GlassFish Server Open Source Edition  4.1 
+|_http-title: Data Web
+8181/tcp open  ssl/intermapper?     syn-ack ttl 127
+| ssl-cert: Subject: commonName=localhost/organizationName=Oracle Corporation/stateOrProvinceName=California/countryName=US/organizationalUnitName=GlassFish/localityName=Santa Clara
+| Issuer: commonName=localhost/organizationName=Oracle Corporation/stateOrProvinceName=California/countryName=US/organizationalUnitName=GlassFish/localityName=Santa Clara
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2014-08-21T13:30:10
+| Not valid after:  2024-08-18T13:30:10
+| MD5:   594f 8111 2179 0c71 532a 00ab 223e 0e8a
+| SHA-1: 1ff8 eff1 b17d c744 191e 213a 3102 9aa7 5982 a63c
+| -----BEGIN CERTIFICATE-----
+| MIIDmTCCAoGgAwIBAgIEMeuNnzANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGEwJV
+| UzETMBEGA1UECBMKQ2FsaWZvcm5pYTEUMBIGA1UEBxMLU2FudGEgQ2xhcmExGzAZ
+| BgNVBAoTEk9yYWNsZSBDb3Jwb3JhdGlvbjESMBAGA1UECxMJR2xhc3NGaXNoMRIw
+| EAYDVQQDEwlsb2NhbGhvc3QwHhcNMTQwODIxMTMzMDEwWhcNMjQwODE4MTMzMDEw
+| WjB9MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEUMBIGA1UEBxML
+| U2FudGEgQ2xhcmExGzAZBgNVBAoTEk9yYWNsZSBDb3Jwb3JhdGlvbjESMBAGA1UE
+| CxMJR2xhc3NGaXNoMRIwEAYDVQQDEwlsb2NhbGhvc3QwggEiMA0GCSqGSIb3DQEB
+| AQUAA4IBDwAwggEKAoIBAQCWpLMWHmNZb8HNZ95LmBfkyMKcJlpn8AWajtEui7yV
+| XdR7o+N2mpx/dP1SX1fkKPVM+rmbMCV6jkNHyKX7uam1YtnlKpM0Hc3jQT1S03p2
+| pWTLusK9Tr+sMQf4E7J0EUNM/TaPvyB0P+2d65mdVPdMxX19KKpfkJ26fLMtzyBp
+| W2mvVzVWgYfrjXPv7RVGayX2Ii7FC7VWC3xCiOKg6vT+kfw7uxOWhsp/utu7Aoo/
+| vHFTbM1ZeocTshlaFsqjTOYH0wMfVibEICca6nuC88OzE5aOnklMZXxyURivh/Qq
+| C+e8IIhqtGWIQV91KdhgqVp+g7HgpJzvm03r2c41BidBAgMBAAGjITAfMB0GA1Ud
+| DgQWBBQTVdt9qTFxozNAVtNJqXdCkKNZOTANBgkqhkiG9w0BAQsFAAOCAQEAB+Xx
+| ljjOVTMcZaVaOJDrmFmhrhlfv19Tvs82VC8DXV6dITzczMmhXuALcTE2zjrbu3hA
+| 7Vv7CvDmAVrDKc0L4aENqZnt2Ch42hsvFSVGhdizj+d5D+83alUG4C0MZ/NgRqvC
+| 9axwXp887+MzYTTE+ctagxCC5drzFR0osvneU/AQcnlIurSs7EkWktimSLWnOm83
+| FQL0ZmaUjIIsV3pFBDMx9pt8agSwCgGOjrkxnpqsU/fLOPbl24b/8tg5dzRHX3/s
+| 8zd5COtZtZA/2X7ocMP03RfstBnQCCZ+y2RGF7gI2KeZHs/xK3mG8SJvxAWU4U/h
+| ZOTwR42VlQhP/vlg5A==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+8686/tcp open  java-rmi             syn-ack ttl 127 Java RMI
+| rmi-dumpregistry: 
+|   Fishyyy/7676/jmxrmi
+|     javax.management.remote.rmi.RMIServerImpl_Stub
+|     @169.254.10.3:49735
+|     extends
+|       java.rmi.server.RemoteStub
+|       extends
+|         java.rmi.server.RemoteObject
+|   jmxrmi
+|     javax.management.remote.rmi.RMIServerImpl_Stub
+|     @169.254.10.3:8686
+|     extends
+|       java.rmi.server.RemoteStub
+|       extends
+|_        java.rmi.server.RemoteObject
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -14d07h18m11s, deviation: 0s, median: -14d07h18m11s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 12 16:40:21 2021 -- 1 IP address (1 host up) scanned in 35.63 seconds

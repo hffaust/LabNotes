@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Wed Nov  3 16:58:25 2021 as: nmap -p80 -sS -sV -sC -oN Craft-nmap-scan -Pn -vvv 192.168.167.169
+Nmap scan report for 192.168.167.169
+Host is up, received user-set (0.043s latency).
+Scanned at 2021-11-03 16:58:26 EDT for 7s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Apache httpd 2.4.48 ((Win64) OpenSSL/1.1.1k PHP/8.0.7)
+|_http-favicon: Unknown favicon MD5: 556F31ACD686989B1AFCF382C05846AA
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.48 (Win64) OpenSSL/1.1.1k PHP/8.0.7
+|_http-title: Craft
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  3 16:58:33 2021 -- 1 IP address (1 host up) scanned in 7.62 seconds

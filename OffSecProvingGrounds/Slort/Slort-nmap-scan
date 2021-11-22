@@ -1,0 +1,88 @@
+# Nmap 7.91 scan initiated Mon Oct 18 14:06:41 2021 as: nmap -sS -p21,135,139,445,3306,4443,5040,7680,8080,49664-49669 -sV -sC -vv -oN Slort-nmap-scan 192.168.147.53
+Nmap scan report for 192.168.147.53
+Host is up, received echo-reply ttl 127 (0.037s latency).
+Scanned at 2021-10-18 14:06:41 EDT for 199s
+
+PORT      STATE SERVICE       REASON          VERSION
+21/tcp    open  ftp           syn-ack ttl 127 FileZilla ftpd 0.9.41 beta
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+3306/tcp  open  mysql?        syn-ack ttl 127
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GetRequest, HTTPOptions, Help, Kerberos, LDAPBindReq, LDAPSearchReq, NCP, NULL, NotesRPC, RPCCheck, SMBProgNeg: 
+|_    Host '192.168.49.147' is not allowed to connect to this MariaDB server
+| mysql-info: 
+|_  MySQL Error: Host '192.168.49.147' is not allowed to connect to this MariaDB server
+4443/tcp  open  http          syn-ack ttl 127 Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-title: Welcome to XAMPP
+|_Requested resource was http://192.168.147.53:4443/dashboard/
+5040/tcp  open  unknown       syn-ack ttl 127
+7680/tcp  open  pando-pub?    syn-ack ttl 127
+8080/tcp  open  http          syn-ack ttl 127 Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-title: Welcome to XAMPP
+|_Requested resource was http://192.168.147.53:8080/dashboard/
+49664/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=10/18%Time=616DB7B2%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20a
+SF:llowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(GetReque
+SF:st,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(HTTPOptio
+SF:ns,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(RPCCheck,
+SF:4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allow
+SF:ed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSStatusReq
+SF:uestTCP,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Help
+SF:,4D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allo
+SF:wed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Kerberos,4D
+SF:,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowed
+SF:\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SMBProgNeg,4D,
+SF:"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowed\
+SF:x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LDAPSearchReq,4
+SF:D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowe
+SF:d\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(LDAPBindReq,4
+SF:D,"I\0\0\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowe
+SF:d\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(NCP,4D,"I\0\0
+SF:\x01\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowed\x20to\
+SF:x20connect\x20to\x20this\x20MariaDB\x20server")%r(NotesRPC,4D,"I\0\0\x0
+SF:1\xffj\x04Host\x20'192\.168\.49\.147'\x20is\x20not\x20allowed\x20to\x20
+SF:connect\x20to\x20this\x20MariaDB\x20server");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 24093/tcp): CLEAN (Timeout)
+|   Check 2 (port 40819/tcp): CLEAN (Timeout)
+|   Check 3 (port 49624/udp): CLEAN (Timeout)
+|   Check 4 (port 53455/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-10-18T18:09:21
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 18 14:10:00 2021 -- 1 IP address (1 host up) scanned in 199.13 seconds

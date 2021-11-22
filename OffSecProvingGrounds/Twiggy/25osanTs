@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Mezzanine</title><link>http://127.0.0.1:8000/blog/</link><description>Blog</description><atom:link rel="self" href="http://127.0.0.1:8000/blog/feeds/rss/"></atom:link><language>en</language><lastBuildDate>Sun, 21 Nov 2021 23:16:10 +0000</lastBuildDate></channel></rss>

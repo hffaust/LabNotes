@@ -1,0 +1,12 @@
+14:09:01.043 [192.168.49.120] Webmail Attempting to login user: admin
+14:09:01.043 [192.168.49.120] Webmail Login failed: Domain [65] not found
+14:09:01.043 [192.168.49.120] Webmail Login failed: Domain [120.65] not found
+14:09:01.043 [192.168.49.120] Webmail Login failed: Domain [168.120.65] not found
+14:09:01.043 [192.168.49.120] Webmail Login failed: Domain [192.168.120.65] not found
+14:09:01.043 [192.168.49.120] Webmail Login failed: LOGIN_FAILURE_DOMAIN_NOT_FOUND. Brute force attempts increased to 1. User brute force attempts increased to 1.
+14:09:55.246 [192.168.49.120] Webmail Attempting to login user: admin
+14:09:55.246 [192.168.49.120] Webmail Login failed: Domain [65] not found
+14:09:55.246 [192.168.49.120] Webmail Login failed: Domain [120.65] not found
+14:09:55.246 [192.168.49.120] Webmail Login failed: Domain [168.120.65] not found
+14:09:55.246 [192.168.49.120] Webmail Login failed: Domain [192.168.120.65] not found
+14:09:55.246 [192.168.49.120] Webmail Login failed: LOGIN_FAILURE_DOMAIN_NOT_FOUND. Brute force attempts increased to 2. User brute force attempts increased to 2.

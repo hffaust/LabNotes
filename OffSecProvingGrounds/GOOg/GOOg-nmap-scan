@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Tue Nov  2 17:22:38 2021 as: nmap -p20,80 -vvv -sV -sC -oN GOOg-nmap-scan 192.168.111.144
+Nmap scan report for 192.168.111.144
+Host is up, received echo-reply ttl 63 (0.038s latency).
+Scanned at 2021-11-02 17:22:39 EDT for 7s
+
+PORT   STATE  SERVICE  REASON         VERSION
+20/tcp closed ftp-data reset ttl 63
+80/tcp open   http     syn-ack ttl 63 Apache httpd 2.4.38
+| http-methods: 
+|_  Supported Methods: OPTIONS
+|_http-server-header: Apache/2.4.38 (Debian)
+Service Info: Host: 127.0.0.1
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  2 17:22:46 2021 -- 1 IP address (1 host up) scanned in 7.59 seconds

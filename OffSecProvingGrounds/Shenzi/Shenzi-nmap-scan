@@ -1,0 +1,69 @@
+# Nmap 7.91 scan initiated Tue Oct 19 21:48:58 2021 as: nmap -sS -p21,80,135,139,443,445,3306,5040,7680 -sV -sC -oN Shenzi-nmap-scan 192.168.66.55
+Nmap scan report for 192.168.66.55
+Host is up (0.040s latency).
+
+PORT     STATE    SERVICE       VERSION
+21/tcp   open     ftp           FileZilla ftpd 0.9.41 beta
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+80/tcp   open     http          Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-title: Welcome to XAMPP
+|_Requested resource was http://192.168.66.55/dashboard/
+135/tcp  open     msrpc         Microsoft Windows RPC
+139/tcp  open     netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp  open     ssl/http      Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-title: Welcome to XAMPP
+|_Requested resource was https://192.168.66.55/dashboard/
+| ssl-cert: Subject: commonName=localhost
+| Not valid before: 2009-11-10T23:48:47
+|_Not valid after:  2019-11-08T23:48:47
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp  open     microsoft-ds?
+3306/tcp open     mysql?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP, FourOhFourRequest, HTTPOptions, JavaRMI, Kerberos, LPDString, NULL, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, afp: 
+|_    Host '192.168.49.66' is not allowed to connect to this MariaDB server
+5040/tcp open     unknown
+7680/tcp filtered pando-pub
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=10/19%Time=616F758C%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\x20al
+SF:lowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(HTTPOptio
+SF:ns,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\x20all
+SF:owed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(DNSVersion
+SF:BindReqTCP,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20no
+SF:t\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SS
+SF:LSessionReq,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20n
+SF:ot\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(T
+SF:LSSessionReq,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20
+SF:not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(
+SF:Kerberos,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(SMBP
+SF:rogNeg,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(FourOh
+SF:FourRequest,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20n
+SF:ot\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(L
+SF:PDString,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\
+SF:x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Term
+SF:inalServer,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20no
+SF:t\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Ja
+SF:vaRMI,4C,"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\x20
+SF:allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(afp,4C,
+SF:"H\0\0\x01\xffj\x04Host\x20'192\.168\.49\.66'\x20is\x20not\x20allowed\x
+SF:20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-10-20T01:51:43
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 19 21:52:18 2021 -- 1 IP address (1 host up) scanned in 200.23 seconds

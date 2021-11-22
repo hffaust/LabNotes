@@ -1,0 +1,91 @@
+# Nmap 7.91 scan initiated Fri Sep 17 16:52:52 2021 as: nmap -p80,135,139,445,3389,3573,49152 -Pn -sV -sC -vv -oN Kevin-version-default-script-scan 192.168.134.45
+Nmap scan report for 192.168.134.45
+Host is up, received user-set (0.030s latency).
+Scanned at 2021-09-17 16:52:52 EDT for 68s
+
+PORT      STATE SERVICE            REASON  VERSION
+80/tcp    open  http               syn-ack GoAhead WebServer
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: GoAhead-Webs
+| http-title: HP Power Manager
+|_Requested resource was http://192.168.134.45/index.asp
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack Windows 7 Ultimate N 7600 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=kevin
+| Issuer: commonName=kevin
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-09-16T20:48:48
+| Not valid after:  2022-03-18T20:48:48
+| MD5:   9b3d 596e 34fa c02c 9b75 8f22 728b 13cd
+| SHA-1: cff6 a0ac d2bc 27bf e485 ae20 21c6 ae4e 2441 87b5
+| -----BEGIN CERTIFICATE-----
+| MIICzjCCAbagAwIBAgIQXV+rEgC5apRP/N7Vx3oguzANBgkqhkiG9w0BAQUFADAQ
+| MQ4wDAYDVQQDEwVrZXZpbjAeFw0yMTA5MTYyMDQ4NDhaFw0yMjAzMTgyMDQ4NDha
+| MBAxDjAMBgNVBAMTBWtldmluMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+| AQEA2GLjfu/faNdhRVMr/L246LWX3uTTnYzsa9IObRHMFUPbMqXOzwRCrVEJo8Nm
+| jbNbWGTONOQsZAVsSOUuTsP8lCr/8/7BCI+S0oH60GGi2cWPv5u8AnZ/sGYFBmv2
+| MZVdfI2E4qCNQ7viR91f9upL2RFbewTeSgrd1JBkVitE7I+yxNGZtbmi8ZflKYUY
+| byhcblUrG1gF6JjD37UR2Cse6/OkTqjeTtDOLk/ik3OKQD4kafYQqLnT+1L46jQT
+| MwZIBDXvisjEksfD96Hmfq6CNFS5CF3arZkGuBTxFLXNTGcN26FN8GeI8YFRT/X/
+| vYsZc6M0phY9jKSp0OAJtuIuLwIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD
+| ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAFLWKVOzp1JT5B8W8wIo
+| vjp6E+bnlDPnQiMVXxVHSpRhVHZ5WoQTrCOIiVC92GJ+rdzS15/k8rmn8TSocGab
+| +tTqmFrtqSwkQCLY56MNngMZXjCkI6jq6SHSMkeDLCuCQVbItel4hll8/8/Hx3+C
+| zDSjC5Iq0bmp9AiMr8Ly7+7BC1rjZ4AHGsMn754rFPALXsvRSIcj6vNr4ow10J7N
+| kXpaDR2GRHZvUWHATXzOMm/eOfEExxl+u76q8X+cRPKtOlkz47Z/v7rmJhOd+5Rj
+| 0058xOOBtpd6O/oVjbG5zESHrEVsaFMyZELJVBtMTuLF7ejKl20TzffIm5IR7oRb
+| v08=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-09-17T20:54:00+00:00; 0s from scanner time.
+3573/tcp  open  tag-ups-1?         syn-ack
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+Service Info: Host: KEVIN; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h45m00s, deviation: 3h30m00s, median: 0s
+| nbstat: NetBIOS name: KEVIN, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:bf:33:d4 (VMware)
+| Names:
+|   KEVIN<20>            Flags: <unique><active>
+|   KEVIN<00>            Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00 50 56 bf 33 d4 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 35738/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 51791/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 16654/udp): CLEAN (Timeout)
+|   Check 4 (port 42618/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 7 Ultimate N 7600 (Windows 7 Ultimate N 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::-
+|   Computer name: kevin
+|   NetBIOS computer name: KEVIN\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-09-17T13:53:53-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-09-17T20:53:52
+|_  start_date: 2021-09-17T20:49:22
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 17 16:54:00 2021 -- 1 IP address (1 host up) scanned in 68.11 seconds

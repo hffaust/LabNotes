@@ -1,0 +1,86 @@
+# Nmap 7.91 scan initiated Thu Sep 16 15:07:37 2021 as: nmap -Pn -p53,135,139,445,3389,5357 -sV -sC -vv -oN Internal-version-def-script-scan 192.168.134.40
+Nmap scan report for 192.168.134.40
+Host is up, received user-set (0.029s latency).
+Scanned at 2021-09-16 15:07:37 EDT for 20s
+
+PORT     STATE SERVICE            REASON  VERSION
+53/tcp   open  domain             syn-ack Microsoft DNS 6.0.6001 (17714650) (Windows Server 2008 SP1)
+| dns-nsid: 
+|_  bind.version: Microsoft DNS 6.0.6001 (17714650)
+135/tcp  open  msrpc              syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn        syn-ack Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds       syn-ack Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp open  ssl/ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=internal
+| Issuer: commonName=internal
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2020-03-19T16:56:02
+| Not valid after:  2020-09-18T16:56:02
+| MD5:   fe7d 3666 054b a564 a622 e572 8892 1dde
+| SHA-1: c3fd d762 51fd 45e2 25f5 5982 ae4f f728 93b5 a5f9
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQVDXkWbbcf4NJnOCVLYhRsDANBgkqhkiG9w0BAQUFADAT
+| MREwDwYDVQQDEwhpbnRlcm5hbDAeFw0yMDAzMTkxNjU2MDJaFw0yMDA5MTgxNjU2
+| MDJaMBMxETAPBgNVBAMTCGludGVybmFsMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAzgltR3pkITr2s7QVE3dByGZ5nnXJfBaeRFXviLglqZrWSb07LwoF
+| 92ESeD+DItFu+IDo2wDwN/k1bs+HQDwsAccniBTzPDyPppTTKQzAtCRSM2KxkQDQ
+| SVPs722IlOBWYNBE9onnZzNhl51zHZ37xTcYL2L/BqH0vBVvbCwRIl9ikkSRIoI8
+| gtIBS1duX7JaKuut1/6KgWuICQUqLeFPieRLU626iSsvDV8/v5zHWuD410K+oCel
+| V/zGiuW2mdFkvXrolfbGLFpA1vDrvUjliLY2IAtNXuP9zSRqth/zjnBnN7Zhm1ZK
+| txCm6aj+E3Y/Obh78AymxZBkWKj48q4ezwIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBADUC2sDRR12u
+| wGJM/fNqrxwucdaEHruEmRNCc6my01FfV8sz1gVJuQT8UVTeytbIs49QuIYL5tys
+| e0e05p+kcQ2ZX85BYfn9Y8ervHCJYRZiVmZwitsJu5I181H0/BloWf/xUUKUVtT8
+| ANSoHiKaIxUPqWfk2onzHTnD4kTjE9YR30VCQncd0ZsN6zxOxAg9mrmjWkU/ZOSC
+| Wrtdq9+mwakV5h0cmvG0qKXWXzNDJ2xCHkrWaKgyVej19cvjagJiuomWuxvlcgJx
+| 2zitUp2H/En08R3np5yXYVoOK7enhlBumlWRX5rj5DHWxzfXBIurnOUw7RuQZiIw
+| nZw0pXVn3UI=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-09-16T19:07:57+00:00; 0s from scanner time.
+5357/tcp open  http               syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+Service Info: Host: INTERNAL; OS: Windows; CPE: cpe:/o:microsoft:windows_server_2008::sp1, cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2
+
+Host script results:
+|_clock-skew: mean: 1h45m00s, deviation: 3h30m00s, median: 0s
+| nbstat: NetBIOS name: INTERNAL, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:bf:c0:07 (VMware)
+| Names:
+|   INTERNAL<00>         Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   INTERNAL<20>         Flags: <unique><active>
+| Statistics:
+|   00 50 56 bf c0 07 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 26934/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 26933/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 49514/udp): CLEAN (Timeout)
+|   Check 4 (port 16981/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: internal
+|   NetBIOS computer name: INTERNAL\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2021-09-16T12:07:49-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-09-16T19:07:49
+|_  start_date: 2020-08-13T03:45:00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 16 15:07:57 2021 -- 1 IP address (1 host up) scanned in 20.07 seconds

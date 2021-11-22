@@ -1,0 +1,113 @@
+# Nmap 7.91 scan initiated Sun Sep 26 16:24:56 2021 as: nmap -Pn -p21,135,139,445,5985,27015,47001 -sV -sC -vv -oN Panic-version-default-script-scan 192.168.193.150
+Nmap scan report for 192.168.193.150
+Host is up, received user-set (0.029s latency).
+Scanned at 2021-09-26 16:24:57 EDT for 28s
+
+PORT      STATE SERVICE      REASON          VERSION
+21/tcp    open  ftp          syn-ack ttl 127 FileZilla ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 AppData
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Application Data
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Contacts
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Cookies
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Desktop
+| drwxr-xr-x 1 ftp ftp              0 Jun 21  2021 Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Downloads
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Favorites
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Links
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Local Settings
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Music
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 My Documents
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 NetHood
+| ---------- 1 ftp ftp         786432 Jun 22  2021 NTUSER.DAT
+| ---------- 1 ftp ftp         225280 Dec 01  2020 ntuser.dat.LOG1
+| ---------- 1 ftp ftp         159744 Dec 01  2020 ntuser.dat.LOG2
+| ---------- 1 ftp ftp          65536 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TM.blf
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000001.regtrans-ms
+| ---------- 1 ftp ftp         524288 Dec 01  2020 NTUSER.DAT{ead35664-3356-11eb-b87c-e1e29d69919f}.TMContainer00000000000000000002.regtrans-ms
+| ---------- 1 ftp ftp             20 Dec 01  2020 ntuser.ini
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Pictures
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 PrintHood
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Recent
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Saved Games
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Searches
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 SendTo
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Start Menu
+| drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Templates
+|_drwxr-xr-x 1 ftp ftp              0 Dec 01  2020 Videos
+| ftp-syst: 
+|_  SYST: UNIX emulated by FileZilla
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+5985/tcp  open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+27015/tcp open  unknown      syn-ack ttl 127
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: 
+|     Huh?
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Epic/1.0
+|     Content-Length: 67
+|     Content-Type: text/html; charset=utf-8
+|_    <html><body>Epic HTTP Server :: 1.0 :: Invulnerable</body></html>
+47001/tcp open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port27015-TCP:V=7.91%I=7%D=9/26%Time=6150D71F%P=x86_64-pc-linux-gnu%r(G
+SF:enericLines,6,"Huh\?\r\n")%r(GetRequest,1FF,"HTTP/1\.1\x20200\x20OK\r\n
+SF:Server:\x20Epic/1\.0\r\nContent-Length:\x2067\r\nContent-Type:\x20text/
+SF:html;\x20charset=utf-8\r\n\r\n<html><body>Epic\x20HTTP\x20Server\x20::\
+SF:x20\x201\.0\x20::\x20Invulnerable</body></html>\n\0\xff\xff\xffI\xb7\xf
+SF:4v\x92\xb7\xf4v\x18H\x80\0\$\0\0\0\x01\0\0\0\0\0\0\0\0\0\0\0p\0\0\0\xff
+SF:\xff\xff\xff\xff\xff\xff\xff\x86}\xf7vv\xb7\xf4vP\xcb\x91s\0\0\0\0\0\0\
+SF:0\0\0\xb0%\x000H\x80\0\xec\xeb\x01w\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x03\xc4\)c\xd4\xf
+SF:b\xce\0\0\0\0\0\xf8\xfc\xce\0pn\xf8v\xd7J\xe7\x14\xfe\xff\xff\xffL\x07\
+SF:xf8v\x9b}\xf7v\xbf\xc5\)c\0\0\0\0\0\0\0\0,\x01\0\0\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\0\0\xf1v\0\0\0\0\$\xfd\xce\0\0\xb0%\0\0\0\0\0\xbc\xfc\xce\0
+SF:\0\0\0\0\xff\xff\xff\xffpn\xf8v\xbc\xf0\xf7v\xea\|\xf7v\$\xfd\xce\0\x01
+SF:\0\0\0\0\0\0\0\0\0\0\0\$\xfd\xce\0\0\0\xf1v\0\0\0\0\?\0\x01\0\0\0\0\0\0
+SF:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x7f\x02\0\0\0\0\0\0\xff\xff\0\0\
+SF:0\0\0\0\0\0\0\0\0\0\0")%r(HTTPOptions,6,"Huh\?\r\n")%r(RTSPRequest,6,"H
+SF:uh\?\r\n")%r(RPCCheck,6,"Huh\?\r\n")%r(DNSVersionBindReqTCP,6,"Huh\?\r\
+SF:n")%r(DNSStatusRequestTCP,6,"Huh\?\r\n")%r(Help,6,"Huh\?\r\n")%r(SSLSes
+SF:sionReq,6,"Huh\?\r\n")%r(TerminalServerCookie,6,"Huh\?\r\n")%r(TLSSessi
+SF:onReq,6,"Huh\?\r\n")%r(Kerberos,6,"Huh\?\r\n")%r(SMBProgNeg,6,"Huh\?\r\
+SF:n")%r(X11Probe,6,"Huh\?\r\n")%r(FourOhFourRequest,6,"Huh\?\r\n")%r(LPDS
+SF:tring,6,"Huh\?\r\n")%r(LDAPSearchReq,6,"Huh\?\r\n")%r(LDAPBindReq,6,"Hu
+SF:h\?\r\n")%r(SIPOptions,6,"Huh\?\r\n")%r(LANDesk-RC,6,"Huh\?\r\n")%r(Ter
+SF:minalServer,6,"Huh\?\r\n")%r(NCP,6,"Huh\?\r\n")%r(NotesRPC,6,"Huh\?\r\n
+SF:")%r(JavaRMI,6,"Huh\?\r\n")%r(WMSRequest,6,"Huh\?\r\n")%r(oracle-tns,6,
+SF:"Huh\?\r\n")%r(ms-sql-s,6,"Huh\?\r\n")%r(afp,6,"Huh\?\r\n")%r(giop,6,"H
+SF:uh\?\r\n");
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 19431/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 12251/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 59610/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 14430/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-09-26T20:25:19
+|_  start_date: 2021-06-24T16:48:24
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 26 16:25:25 2021 -- 1 IP address (1 host up) scanned in 28.94 seconds

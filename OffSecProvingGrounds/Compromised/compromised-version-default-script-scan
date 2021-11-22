@@ -1,0 +1,72 @@
+# Nmap 7.91 scan initiated Wed Sep 15 16:42:01 2021 as: nmap -sS -p80,135,139,443,445,5985,49666 -vv -Pn -sC -sV -oN compromised-version-default-script-scan 192.168.146.152
+Nmap scan report for 192.168.146.152
+Host is up, received user-set (0.048s latency).
+Scanned at 2021-09-15 16:42:01 EDT for 95s
+
+PORT      STATE SERVICE       REASON          VERSION
+80/tcp    open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+443/tcp   open  ssl/http      syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+| ssl-cert: Subject: commonName=PowerShellWebAccessTestWebSite
+| Issuer: commonName=PowerShellWebAccessTestWebSite
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2021-06-01T08:00:08
+| Not valid after:  2021-08-30T08:00:08
+| MD5:   b7f6 d9ee 88ed 8557 836c 5955 9ace 0128
+| SHA-1: 85a3 b573 101e d137 0acf e7fd 3838 ca07 22ed c211
+| -----BEGIN CERTIFICATE-----
+| MIICHTCCAYagAwIBAgIQUw6JIMwFGLBDGxzL8T//hjANBgkqhkiG9w0BAQUFADAp
+| MScwJQYDVQQDDB5Qb3dlclNoZWxsV2ViQWNjZXNzVGVzdFdlYlNpdGUwHhcNMjEw
+| NjAxMDgwMDA4WhcNMjEwODMwMDgwMDA4WjApMScwJQYDVQQDDB5Qb3dlclNoZWxs
+| V2ViQWNjZXNzVGVzdFdlYlNpdGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGB
+| AK3QP6tJMnBioV0AggRC9XBFr1Ju+a8DvQsjt5LY/KTDTP90zVxVqhPlUdWOtyoG
+| 1XaOBl4KOYky/Xfhylc05U+4ZriUIQk7mzZUlNYvFsRvSk9MPeCFaflvNbOvZZXM
+| usH74avd76CFhBLs7qFTjbNimoGVHZYjvkTZd+BnQo3dAgMBAAGjRjBEMBMGA1Ud
+| JQQMMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRAdfdqCniOcBFIibuqbPI42qpRojAO
+| BgNVHQ8BAf8EBAMCBSAwDQYJKoZIhvcNAQEFBQADgYEAdTpBnf2q/ZxoAckwb3xs
+| eBnHYdeSrU5BGZj79rD+2TSznnFgeDdmoxOJy4AJFZ1NufKjLP7i3XEi78VtuqKL
+| hQLL4OCBT4zttvVSZVdni1vQ4XrMc+lBTWROK6NuWyjK7QYvtuGwFjVKAQ9X3Q3D
+| 1y0RvwgwqiRvnnxwKjqzGBk=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-09-15T20:43:37+00:00; +1s from scanner time.
+| tls-alpn: 
+|_  http/1.1
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49666/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 47846/tcp): CLEAN (Timeout)
+|   Check 2 (port 14843/tcp): CLEAN (Timeout)
+|   Check 3 (port 56368/udp): CLEAN (Timeout)
+|   Check 4 (port 61403/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-09-15T20:42:59
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 15 16:43:36 2021 -- 1 IP address (1 host up) scanned in 95.60 seconds

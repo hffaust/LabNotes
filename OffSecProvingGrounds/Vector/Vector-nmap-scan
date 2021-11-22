@@ -1,0 +1,89 @@
+# Nmap 7.91 scan initiated Tue Oct 19 17:18:43 2021 as: nmap -sS -p21,80,135,139,445,2290,3389,5985 -sV -sC -vv -oN Vector-nmap-scan 192.168.147.119
+Nmap scan report for 192.168.147.119
+Host is up, received echo-reply ttl 127 (0.039s latency).
+Scanned at 2021-10-19 17:18:43 EDT for 53s
+
+PORT     STATE SERVICE       REASON          VERSION
+21/tcp   open  ftp           syn-ack ttl 127 Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp   open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds  syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+2290/tcp open  http          syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+3389/tcp open  ms-wbt-server syn-ack ttl 127 Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: VECTOR
+|   NetBIOS_Domain_Name: VECTOR
+|   NetBIOS_Computer_Name: VECTOR
+|   DNS_Domain_Name: vector
+|   DNS_Computer_Name: vector
+|   Product_Version: 10.0.17763
+|_  System_Time: 2021-10-19T21:18:56+00:00
+| ssl-cert: Subject: commonName=vector
+| Issuer: commonName=vector
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-09-20T18:21:33
+| Not valid after:  2022-03-22T18:21:33
+| MD5:   9f9a 1f6b 3f7b 3178 b7d0 1aa5 9df4 25ad
+| SHA-1: 4254 3770 1d9d dcd2 0886 be7f b28d b6b6 2a3f 8c6a
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIQeYu1RKPBi5ZGlb45mRn2PzANBgkqhkiG9w0BAQsFADAR
+| MQ8wDQYDVQQDEwZ2ZWN0b3IwHhcNMjEwOTIwMTgyMTMzWhcNMjIwMzIyMTgyMTMz
+| WjARMQ8wDQYDVQQDEwZ2ZWN0b3IwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+| AoIBAQDDr2miLgRIxMpeZt0hr7uCp47cKDVAgKrRHrqiNIzQTxUrz8Vrw7Sn4EHN
+| RNYp8OiOLcysGtAftDQggV8kWQQqKv5sPlH7WZTx5wEeoQ1X9T6aOj5bJpxoEt8x
+| ISvo5KdSK9Sdz2I/BG0a1zqb04T6NCnvXDp2oGmu9+IuXubSWNgYvFU7s9oqiNbJ
+| EH7bMi4LU3Os4q5tu96MwDJo55ofIp961Br8LD/vsxkiA29JDKtoX9z5gEgKunyI
+| urPL9cMZsMuOkXfrEnjSYQc4yxyGkTGZxyklUR96L9BFxPQ68ydTHE0ree3A4szs
+| J8PoTmQWkSYStgEhikcwf2txvrt5AgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUF
+| BwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsFAAOCAQEADuuGYCIqaK5pUNDv
+| RyFS0pAYDmEdvwS2q1+LBhfLcHKSgmTuozOQ/aERHboB/N0Vo04M111s5FjYzTaz
+| 3iPQfxJxYzf3L5DdtZfAcW7DioVqE31bxdSP2tbR7kiuETqEJgDXpUEL+lEqdr/K
+| +THMkRnjFUyHXvHcQ63SbjkiWvDiI1+OWLKia2WmrRYx8TiECNkaddhspfMIUF6X
+| QdoPvEYilwQ1VlFcc8iBPLlAOp6bRMID8DXjSX5GZB1dBcsLs02OiwrSUwyXZtDJ
+| Q4Q5C6rGKL/lLtDEeden9m3tL+GXfLphsxqo6xmaWhW3yZ8oKhi7stxEHWvxeWU1
+| /yO+PQ==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2021-10-19T21:19:36+00:00; +1s from scanner time.
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 39151/tcp): CLEAN (Timeout)
+|   Check 2 (port 47877/tcp): CLEAN (Timeout)
+|   Check 3 (port 17362/udp): CLEAN (Timeout)
+|   Check 4 (port 46009/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-10-19T21:18:57
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 19 17:19:36 2021 -- 1 IP address (1 host up) scanned in 53.12 seconds
