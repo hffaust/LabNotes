@@ -1,0 +1,118 @@
+# Nmap 7.91 scan initiated Sun Nov 21 21:20:22 2021 as: nmap -p21,22,80,111,139,445,3306,8081 -vvv -sV -sC -oN Quackerjack-nmap-scan 192.168.205.57
+Nmap scan report for 192.168.205.57
+Host is up, received echo-reply ttl 63 (0.032s latency).
+Scanned at 2021-11-21 21:20:22 EST for 61s
+
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 63 vsftpd 3.0.2
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.49.205
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.2 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 a2:ec:75:8d:86:9b:a3:0b:d3:b6:2f:64:04:f9:fd:25 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWsUPf+lVe3JddBDNBbM3vSxW2Nbl7ZniBHSy2r7B9KN42uteBJeZtPoxcBGPEcUv4ZZQ7CrIyKEqNjpz4QfryIb9Ta4ehTJNumQCXV2r2VsLDYCK0C+FjOwc++o/iqUOPm48NNO3s//vhb33VZ1g5dnEnXQ68jdJ3G382+cVfcWj6WSZLS1hk7HLq2lYrTZD6krJ1eEZxgIb6YiXnSruEtntEpiEy5c92yh3KFnvVhgwNJe/WyNpXLrE4I66lX5EWhTAhw/6373RL/3efGsptmwhb7wrMXdscic/JOmUMUKYPRVl7KGMik0kjVH/rXpEpTjUONQ+3DhuT7khuB5MF
+|   256 b6:d2:fd:bb:08:9a:35:02:7b:33:e3:72:5d:dc:64:82 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMT94WFh/L5UMkSoHb0Obh3JTETeKzHNMKfnuJleky0X/AEbM+TV5WCsd7GcWfhfsFxK1xyK9iyNzmKmShy3Fk8=
+|   256 08:95:d6:60:52:17:3d:03:e4:7d:90:fd:b2:ed:44:86 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIANg5sdcd3U3DkheWc10jhSTJbOSE7Lqtyu+yQhLuywl
+80/tcp   open  http        syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16)
+| http-methods: 
+|   Supported Methods: OPTIONS GET HEAD POST TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+111/tcp  open  rpcbind     syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+139/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: SAMBA)
+445/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 4.10.4 (workgroup: SAMBA)
+3306/tcp open  mysql       syn-ack ttl 63 MariaDB (unauthorized)
+8081/tcp open  ssl/http    syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16)
+|_http-favicon: Unknown favicon MD5: 52D936993020A4A4BF686DB0EED64D5A
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| ssl-cert: Subject: commonName=quackerjack/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/emailAddress=root@quackerjack/organizationalUnitName=SomeOrganizationalUnit
+| Issuer: commonName=quackerjack/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/localityName=SomeCity/emailAddress=root@quackerjack/organizationalUnitName=SomeOrganizationalUnit
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2020-06-22T19:28:25
+| Not valid after:  2021-06-22T19:28:25
+| MD5:   ea49 5ac9 a64c f14d 0847 f4b8 2a3e 6ea0
+| SHA-1: 5e3b 3a09 9c75 6044 f1aa 168c 9592 8e56 e025 243f
+| -----BEGIN CERTIFICATE-----
+| MIID5jCCAs6gAwIBAgICO14wDQYJKoZIhvcNAQELBQAwgacxCzAJBgNVBAYTAi0t
+| MRIwEAYDVQQIDAlTb21lU3RhdGUxETAPBgNVBAcMCFNvbWVDaXR5MRkwFwYDVQQK
+| DBBTb21lT3JnYW5pemF0aW9uMR8wHQYDVQQLDBZTb21lT3JnYW5pemF0aW9uYWxV
+| bml0MRQwEgYDVQQDDAtxdWFja2VyamFjazEfMB0GCSqGSIb3DQEJARYQcm9vdEBx
+| dWFja2VyamFjazAeFw0yMDA2MjIxOTI4MjVaFw0yMTA2MjIxOTI4MjVaMIGnMQsw
+| CQYDVQQGEwItLTESMBAGA1UECAwJU29tZVN0YXRlMREwDwYDVQQHDAhTb21lQ2l0
+| eTEZMBcGA1UECgwQU29tZU9yZ2FuaXphdGlvbjEfMB0GA1UECwwWU29tZU9yZ2Fu
+| aXphdGlvbmFsVW5pdDEUMBIGA1UEAwwLcXVhY2tlcmphY2sxHzAdBgkqhkiG9w0B
+| CQEWEHJvb3RAcXVhY2tlcmphY2swggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+| AoIBAQCfXg69mepV/KrHuYiKf9RKnNK9VxJW30pDY0UekIgspGwQbXDHMw6glQcW
+| WMBq8emEnRBxg6bgoVjfkZGezrPsF0LTOO7RXLqWTqdIg+PHqdSd9igshsVGRrYL
+| nQcoWERvXQWKOXliT4mozYLft+f9i1FwjNu+OtuhfQf2ZPt+mO4vCW3dFez/GVCy
+| Oa14nhLzkFojn8434YaKQyRop0rUtwsz7n8qVShyfCg6h8UDwdnjWu/z6UXXj83t
+| HQtiB9/H7E4+GnPD7ctyX5ri8M5ykeX/yXI4gcdaVByxDFM+kWidXhVbTNB0i9qT
+| pgwiSvlHcdm3xG0Zs+GqURqnKh6lAgMBAAGjGjAYMAkGA1UdEwQCMAAwCwYDVR0P
+| BAQDAgXgMA0GCSqGSIb3DQEBCwUAA4IBAQCIgEcbHF/IWSF0FZvdvG0QYTw2unL6
+| k46TP3uuQ+tAa7LMCjPdB86ZuoGaqDLkseOnnaS+nYwLNgX3wajHJNDhramHRCh1
+| mixGmxsOxdzuQd/hHnSyPf7tUZnvvhWE7upvSt9CuAp48Zm5gMwsruoE/StC8rHM
+| T7/7pcG7aT/72ppel4Cu7rq1F4sO+GCkzmKAL2iTUtwwua/I6UM0csxL+7Hvz9vQ
+| IKl+/g4t27fQWQGfnPZmsk5kD6t1wdG4BezLI8NU40YUltyd2q4JriKFVPJMv/Kq
+| huqloK1vibafthCxg2xbehcghB8L1fQ7wew9ylvfLtuYNDKlSjSux7IN
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+Service Info: Host: QUACKERJACK; OS: Unix
+
+Host script results:
+|_clock-skew: mean: 1h40m00s, deviation: 2h53m13s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 24147/tcp): CLEAN (Timeout)
+|   Check 2 (port 34947/tcp): CLEAN (Timeout)
+|   Check 3 (port 17502/udp): CLEAN (Timeout)
+|   Check 4 (port 52542/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.10.4)
+|   Computer name: quackerjack
+|   NetBIOS computer name: QUACKERJACK\x00
+|   Domain name: \x00
+|   FQDN: quackerjack
+|_  System time: 2021-11-21T21:20:44-05:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-11-22T02:20:47
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 21 21:21:23 2021 -- 1 IP address (1 host up) scanned in 61.40 seconds
